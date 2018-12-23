@@ -65,8 +65,8 @@ function setup () {
     for dir in "mapping"; do
         echo -en "$ROOT_DIR/$dir\t\t\t"
         cd ${dir}
-        if [ -f ".gitmodules.$PROJECT" ]; then
-            ln -vfs .gitmodules.${PROJECT} .gitmodules
+        if [ -f "../.gitmodules.$PROJECT" ]; then
+            ln -vfs ../.gitmodules.${PROJECT} .gitmodules
         else
             on_error "Missing submodule file of project: $PROJECT for repo: $dir!"
         fi
